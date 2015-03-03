@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Queue<E> {
+
+    LinkedList<E> queue = new List<E>();
+
+    public void push(E val) {
+    
+	queue.add(0, val);
+    }
+
+    public E pop() {
+
+	E ret = queue.get(0);
+	queue.remove(0);
+	return ret;
+    }
+
+    public boolean isEmpty() {
+
+	return queue.isEmpty();
+    }
+}

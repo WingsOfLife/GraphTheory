@@ -95,11 +95,11 @@ public class Theory {
 
     public static PositionObj findShortestPath(PositionObj[] iter, boolean print) {
 
-	ArrayDeque<PositionObj> toSearch = new ArrayDeque<PositionObj>();
+	Queue<PositionObj> toSearch = new Queue<PositionObj>();
 	//Stack<PositionObj> toSearch = new Stack<PositionObj>();
 	LinkedList<PositionObj> path = new LinkedList<PositionObj>();
 
-	toSearch.add(iter[0]);
+	toSearch.push(iter[0]);
 
 	while (!toSearch.isEmpty()) {
 
@@ -108,7 +108,7 @@ public class Theory {
 	    if (print)
 		print(iter, arraySize);
 
-	    PositionObj currentComp = toSearch.poll();
+	    PositionObj currentComp = toSearch.pop();
 	    for (Directions.Direction dir : Directions.dirs) {
 
 		PositionObj toComp = new PositionObj(currentComp.xPos + dir.xOffset, currentComp.yPos + dir.yOffset);
@@ -128,7 +128,7 @@ public class Theory {
 		       
 			//System.out.println("Adding to stack.");
 			setSearched(arrVal, iter);
-			toSearch.add(arrVal);
+			toSearch.push(arrVal);
 			path.add(arrVal);
 		    }
 		} 

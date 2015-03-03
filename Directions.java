@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Directions {
 
-    public static Direction[] dirs = { Direction.UP,  Direction.LEFT, Direction.RIGHT, Direction.DOWN };
+    public static Direction[] dirs = {  Direction.LEFT, Direction.RIGHT, Direction.UP, Direction.DOWN };
 
     public enum Direction {
 
