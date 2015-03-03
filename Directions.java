@@ -1,3 +1,8 @@
+/**
+ * @author: Doc
+ * @description: A class that sets up pseudo directions to manage the artifical array.
+ **/
+
 import java.util.*;
 
 public class Directions {
